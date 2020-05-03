@@ -16,13 +16,15 @@ class HeroesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = NSLocalizedString("Heroes", comment: "")
         
         self.table.delegate = self
         self.table.dataSource = self
         
         self.heroes = CoreDataManager.shared.getHeroes()
+        
+        let nib = UINib.init(nibName: "CharacterTableViewCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "CharacterCell")
     }
 
 
@@ -44,8 +46,8 @@ extension HeroesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = self.heroes[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterTableViewCell
+        cell.setCharacter(self.heroes[indexPath.row])
         return cell
     }
 }
@@ -53,7 +55,9 @@ extension HeroesViewController: UITableViewDataSource {
 
 extension HeroesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailController = CharacterDetailViewController(character: self.heroes[indexPath.row])
+        let detailController = CharacterDetailViewController(character: self.heroes[indexPath.row]) {
+            self.table.reloadData()
+        }
         self.navigationController?.pushViewController(detailController, animated: true)
     }
 }

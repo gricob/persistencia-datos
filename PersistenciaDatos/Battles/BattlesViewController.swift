@@ -13,6 +13,12 @@ class BattlesViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     var battles: [Battle] = []
+    
+    convenience init(battles: [Battle]) {
+        self.init(nibName: "BattlesViewController", bundle: nil)
+        
+        self.battles = battles
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +76,8 @@ extension BattlesViewController: UITableViewDataSource {
             self.table.reloadData()
             complete(true)
         }
+        
+        deleteAction.backgroundColor = .red
         
         let actionsConfiguration = UISwipeActionsConfiguration(actions: [
             deleteAction

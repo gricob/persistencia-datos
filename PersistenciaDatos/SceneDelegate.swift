@@ -10,6 +10,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    let lastScreenKey = "lastScreen"
     var window: UIWindow?
 
 
@@ -39,6 +40,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             villainsNavController
         ]
         
+        tabBarController.selectedIndex = UserDefaults.standard.integer(forKey: lastScreenKey)
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = tabBarController
@@ -50,6 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        saveCurrentScreen()
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -71,11 +75,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-
+        
+        saveCurrentScreen()
+        
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    
     }
 
-
+    func saveCurrentScreen() {
+        let selectedIndex = (self.window?.rootViewController as! UITabBarController).selectedIndex
+        UserDefaults.standard.setValue(selectedIndex, forKey: lastScreenKey)
+    }
 }
 

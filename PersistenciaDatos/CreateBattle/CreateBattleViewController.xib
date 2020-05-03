@@ -35,15 +35,24 @@
                         <action selector="fightButtonTapped:" destination="-1" eventType="touchUpInside" id="CVf-gF-aiS"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select fighters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U74-Hr-X7R">
+                    <rect key="frame" x="20" y="268.5" width="374" height="31.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="0Om-MI-SeE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Bvj-M5-JfE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U74-Hr-X7R" secondAttribute="trailing" constant="20" id="C1c-MH-J4b"/>
                 <constraint firstItem="0Om-MI-SeE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MTB-Vp-eIv"/>
                 <constraint firstItem="0Om-MI-SeE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TFl-fT-npc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Om-MI-SeE" secondAttribute="trailing" constant="20" id="WxO-qN-uid"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UQu-2n-cb4" secondAttribute="bottom" constant="20" id="eXl-yg-Svu"/>
                 <constraint firstItem="UQu-2n-cb4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="elN-wA-Wo8"/>
+                <constraint firstItem="U74-Hr-X7R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fjV-5E-Sbe"/>
+                <constraint firstItem="0Om-MI-SeE" firstAttribute="top" secondItem="U74-Hr-X7R" secondAttribute="bottom" constant="40" id="pfU-C3-MU3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="153"/>

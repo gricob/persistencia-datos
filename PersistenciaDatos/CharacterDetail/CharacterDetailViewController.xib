@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="PersistenciaDatos" customModuleProvider="target">
             <connections>
-                <outlet property="biographyContent" destination="hvn-Iq-tyb" id="uiH-vY-aqD"/>
-                <outlet property="biographyLabel" destination="Lmf-pt-Y5h" id="mKR-R4-rKm"/>
+                <outlet property="battlesTable" destination="lD3-Ej-whs" id="u9a-X2-tfg"/>
                 <outlet property="image" destination="dkF-uy-DXY" id="K3Q-fb-pux"/>
+                <outlet property="infoTable" destination="bHi-ac-J6A" id="Spb-85-y5h"/>
                 <outlet property="powerImage" destination="D1j-L7-FKz" id="ope-Tk-srd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,49 +34,45 @@
                         <constraint firstAttribute="height" constant="32" id="ubb-kj-DUD"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmf-pt-Y5h" userLabel="BiographyTitle">
-                    <rect key="frame" x="20" y="336" width="374" height="23"/>
-                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvn-Iq-tyb" userLabel="BiographyContent">
-                    <rect key="frame" x="20" y="379" width="374" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-gu-HXK">
-                    <rect key="frame" x="362" y="284" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="32" id="F7i-Es-dKz"/>
-                        <constraint firstAttribute="height" constant="32" id="en8-cS-8m7"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button" image="pencil" catalog="system"/>
-                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-or-26d">
+                    <rect key="frame" x="125.5" y="336" width="163" height="32"/>
+                    <segments>
+                        <segment title="Biography"/>
+                        <segment title="Battles"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedChanged:" destination="-1" eventType="valueChanged" id="zZV-HW-d6c"/>
+                    </connections>
+                </segmentedControl>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-Ej-whs" userLabel="battlesTable">
+                    <rect key="frame" x="0.0" y="387" width="414" height="475"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-ac-J6A" userLabel="infoTable">
+                    <rect key="frame" x="0.0" y="387" width="414" height="475"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="hvn-Iq-tyb" firstAttribute="top" secondItem="Lmf-pt-Y5h" secondAttribute="bottom" constant="20" id="6Di-0a-v5K"/>
-                <constraint firstItem="4bG-gu-HXK" firstAttribute="top" secondItem="dkF-uy-DXY" secondAttribute="bottom" constant="20" id="DnM-iV-c8h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lD3-Ej-whs" secondAttribute="trailing" id="9XT-ag-j16"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bHi-ac-J6A" secondAttribute="bottom" id="FKu-MK-zgp"/>
+                <constraint firstItem="bHi-ac-J6A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IUM-JU-S7R"/>
                 <constraint firstItem="dkF-uy-DXY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Jbg-NU-Mp2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hvn-Iq-tyb" secondAttribute="trailing" constant="20" id="P1I-cz-MHb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4bG-gu-HXK" secondAttribute="trailing" constant="20" id="SKv-bV-MNL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lD3-Ej-whs" secondAttribute="bottom" id="JqB-dZ-aWU"/>
                 <constraint firstItem="dkF-uy-DXY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SvL-hh-gio"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dkF-uy-DXY" secondAttribute="trailing" constant="20" id="aVE-Bp-Hjj"/>
                 <constraint firstItem="D1j-L7-FKz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b6L-ls-2gy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lmf-pt-Y5h" secondAttribute="trailing" constant="20" id="eLP-cz-jMS"/>
-                <constraint firstItem="Lmf-pt-Y5h" firstAttribute="top" secondItem="D1j-L7-FKz" secondAttribute="bottom" constant="20" id="kb2-wJ-gZq"/>
-                <constraint firstItem="Lmf-pt-Y5h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="u6M-B9-PRo"/>
+                <constraint firstItem="cbB-or-26d" firstAttribute="top" secondItem="D1j-L7-FKz" secondAttribute="bottom" constant="20" id="hl4-mw-jCc"/>
+                <constraint firstItem="cbB-or-26d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m1g-fg-Wc0"/>
+                <constraint firstItem="lD3-Ej-whs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mmT-fz-QQ5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bHi-ac-J6A" secondAttribute="trailing" id="qBR-qu-OHj"/>
                 <constraint firstItem="D1j-L7-FKz" firstAttribute="top" secondItem="dkF-uy-DXY" secondAttribute="bottom" constant="20" id="umg-MI-LUd"/>
-                <constraint firstItem="hvn-Iq-tyb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wbN-gW-N1p"/>
+                <constraint firstItem="bHi-ac-J6A" firstAttribute="top" secondItem="cbB-or-26d" secondAttribute="bottom" constant="20" id="yNO-pU-q6U"/>
+                <constraint firstItem="lD3-Ej-whs" firstAttribute="top" secondItem="cbB-or-26d" secondAttribute="bottom" constant="20" id="zQE-jv-0AC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
-    <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-    </resources>
 </document>

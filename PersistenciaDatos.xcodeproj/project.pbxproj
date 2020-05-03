@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D57F7566245EE2F100976E12 /* CreateBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F7564245EE2F100976E12 /* CreateBattleViewController.swift */; };
 		D57F7567245EE2F100976E12 /* CreateBattleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57F7565245EE2F100976E12 /* CreateBattleViewController.xib */; };
+		D57F7570245F09A100976E12 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F756E245F09A100976E12 /* CharacterTableViewCell.swift */; };
+		D57F7571245F09A100976E12 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57F756F245F09A100976E12 /* CharacterTableViewCell.xib */; };
+		D57F757F245F138E00976E12 /* EditPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F757D245F138E00976E12 /* EditPowerViewController.swift */; };
+		D57F7580245F138E00976E12 /* EditPowerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57F757E245F138E00976E12 /* EditPowerViewController.xib */; };
 		D5DA76D9245EBA64000C7427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76D8245EBA64000C7427 /* AppDelegate.swift */; };
 		D5DA76DB245EBA64000C7427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76DA245EBA64000C7427 /* SceneDelegate.swift */; };
 		D5DA76DD245EBA64000C7427 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76DC245EBA64000C7427 /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		D57F7564245EE2F100976E12 /* CreateBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBattleViewController.swift; sourceTree = "<group>"; };
 		D57F7565245EE2F100976E12 /* CreateBattleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateBattleViewController.xib; sourceTree = "<group>"; };
+		D57F756E245F09A100976E12 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		D57F756F245F09A100976E12 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		D57F757D245F138E00976E12 /* EditPowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPowerViewController.swift; sourceTree = "<group>"; };
+		D57F757E245F138E00976E12 /* EditPowerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPowerViewController.xib; sourceTree = "<group>"; };
 		D5DA76D5245EBA64000C7427 /* PersistenciaDatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenciaDatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DA76D8245EBA64000C7427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DA76DA245EBA64000C7427 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,17 @@
 			path = CreateBattle;
 			sourceTree = "<group>";
 		};
+		D57F756D245F098400976E12 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				D57F756E245F09A100976E12 /* CharacterTableViewCell.swift */,
+				D57F756F245F09A100976E12 /* CharacterTableViewCell.xib */,
+				D57F757D245F138E00976E12 /* EditPowerViewController.swift */,
+				D57F757E245F138E00976E12 /* EditPowerViewController.xib */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
 		D5DA76CC245EBA64000C7427 = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +106,9 @@
 		D5DA76D7245EBA64000C7427 /* PersistenciaDatos */ = {
 			isa = PBXGroup;
 			children = (
-				D57F7563245EE2C700976E12 /* CreateBattle */,
+				D57F756D245F098400976E12 /* Characters */,
 				D5DA770D245EC330000C7427 /* CharacterDetail */,
+				D57F7563245EE2C700976E12 /* CreateBattle */,
 				D5DA7700245EBF3D000C7427 /* Data */,
 				D5DA76FB245EBC3B000C7427 /* Battles */,
 				D5DA76F6245EBBF9000C7427 /* Villains */,
@@ -207,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5DA76FA245EBC25000C7427 /* VillainsViewController.xib in Resources */,
+				D57F7580245F138E00976E12 /* EditPowerViewController.xib in Resources */,
 				D5DA76FF245EBC4B000C7427 /* BattlesViewController.xib in Resources */,
 				D57F7567245EE2F100976E12 /* CreateBattleViewController.xib in Resources */,
+				D57F7571245F09A100976E12 /* CharacterTableViewCell.xib in Resources */,
 				D5DA76F5245EBBEE000C7427 /* HeroesViewController.xib in Resources */,
 				D5DA76F0245EBB12000C7427 /* Assets.xcassets in Resources */,
 				D5DA76E8245EBA65000C7427 /* LaunchScreen.storyboard in Resources */,
@@ -228,10 +250,12 @@
 				D5DA76FE245EBC4B000C7427 /* BattlesViewController.swift in Sources */,
 				D5DA76F9245EBC25000C7427 /* VillainsViewController.swift in Sources */,
 				D5DA76DB245EBA64000C7427 /* SceneDelegate.swift in Sources */,
+				D57F7570245F09A100976E12 /* CharacterTableViewCell.swift in Sources */,
 				D5DA7711245EC3C6000C7427 /* CoreDataManager.swift in Sources */,
 				D5DA76E3245EBA64000C7427 /* PersistenciaDatos.xcdatamodeld in Sources */,
 				D5DA7714245ED68F000C7427 /* CharacterDetailViewController.swift in Sources */,
 				D57F7566245EE2F100976E12 /* CreateBattleViewController.swift in Sources */,
+				D57F757F245F138E00976E12 /* EditPowerViewController.swift in Sources */,
 				D5DA76F4245EBBEE000C7427 /* HeroesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
