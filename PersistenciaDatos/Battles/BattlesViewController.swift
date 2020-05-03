@@ -9,22 +9,55 @@
 import UIKit
 
 class BattlesViewController: UIViewController {
+    
+    @IBOutlet weak var table: UITableView!
+    
+    var battles: [Battle] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.table.delegate = self
+        self.table.dataSource = self
 
         self.title = NSLocalizedString("Battles", comment: "")
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonTapped))
+        
+        self.battles = CoreDataManager.shared.getBattles()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func plusButtonTapped() {
+        let createBattleController = CreateBattleViewController(battleCreatedCallback: ({
+            self.battles = CoreDataManager.shared.getBattles()
+            self.table.reloadData()
+        }))
+        self.navigationController?.present(createBattleController, animated: true, completion: nil)
     }
-    */
 
+}
+
+extension BattlesViewController: UITableViewDelegate {
+    
+}
+
+extension BattlesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.battles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let battle = self.battles[indexPath.row]
+        let heroName = battle.hero?.name ?? "Unknown"
+        let villainName = battle.villain?.name ?? "Unknown"
+        
+        cell.textLabel?.text = "Battle \(battle.id)"
+        cell.detailTextLabel?.text = "\(heroName) vs \(villainName)"
+        
+        cell.imageView?.image = UIImage(named: battle.winner == battle.hero ? "ic_tab_heroes" : "ic_tab_villain")?.withRenderingMode(.alwaysTemplate)
+        cell.imageView?.tintColor = (battle.hero == battle.winner) ? .blue : .red
+        
+        return cell
+    }
 }

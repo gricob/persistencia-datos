@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Battle" representedClassName="Battle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="hero" maxCount="1" deletionRule="Nullify" destinationEntity="Hero" inverseName="battles" inverseEntity="Hero"/>
+        <relationship name="villain" maxCount="1" deletionRule="Nullify" destinationEntity="Villain" inverseName="battles" inverseEntity="Villain"/>
+        <relationship name="winner" maxCount="1" deletionRule="Nullify" destinationEntity="Character"/>
+    </entity>
+    <entity name="Character" representedClassName="Character" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Hero" representedClassName="Hero" parentEntity="Character" syncable="YES" codeGenerationType="class">
+        <relationship name="battles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battle" inverseName="hero" inverseEntity="Battle"/>
+    </entity>
+    <entity name="Villain" representedClassName="Villain" parentEntity="Character" syncable="YES" codeGenerationType="class">
+        <relationship name="battles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battle" inverseName="villain" inverseEntity="Battle"/>
+    </entity>
+    <elements>
+        <element name="Battle" positionX="-18" positionY="135" width="128" height="103"/>
+        <element name="Character" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Hero" positionX="45" positionY="144" width="128" height="58"/>
+        <element name="Villain" positionX="76.52734375" positionY="225.671875" width="128" height="58"/>
+    </elements>
+</model>

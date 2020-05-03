@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class HeroesViewController: UIViewController {
-
+    @IBOutlet weak var table: UITableView!
+    
+    var heroes: [Hero] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = NSLocalizedString("Heroes", comment: "")
+        
+        self.table.delegate = self
+        self.table.dataSource = self
+        
+        self.heroes = CoreDataManager.shared.getHeroes()
     }
 
 
@@ -27,4 +36,24 @@ class HeroesViewController: UIViewController {
     }
     */
 
+}
+
+extension HeroesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.heroes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = self.heroes[indexPath.row].name
+        return cell
+    }
+}
+
+
+extension HeroesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController = CharacterDetailViewController(character: self.heroes[indexPath.row])
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
 }

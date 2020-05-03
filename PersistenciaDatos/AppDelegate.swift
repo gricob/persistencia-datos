@@ -12,10 +12,17 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var firstLaunch: Bool = !UserDefaults.standard.dictionaryRepresentation().keys.contains("firstLaunch")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if (self.firstLaunch) {
+            CoreDataManager.shared.load()
+            
+            UserDefaults.standard.set(true, forKey: "firstLaunch")
+        }
+        
         return true
     }
 
