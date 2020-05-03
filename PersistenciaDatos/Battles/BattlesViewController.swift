@@ -60,4 +60,21 @@ extension BattlesViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteTitle = NSLocalizedString("Delete", comment: "Delete action")
+        let deleteAction = UIContextualAction(style: .normal, title: deleteTitle) { (myContext, myView, complete) in
+            let battle = self.battles[indexPath.row]
+            CoreDataManager.shared.delete(battle)
+            self.battles = CoreDataManager.shared.getBattles()
+            self.table.reloadData()
+            complete(true)
+        }
+        
+        let actionsConfiguration = UISwipeActionsConfiguration(actions: [
+            deleteAction
+        ])
+        
+        return actionsConfiguration
+    }
 }

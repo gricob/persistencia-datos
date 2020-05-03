@@ -26,6 +26,14 @@ class CoreDataManager {
         return appDelegate.persistentContainer.viewContext
     }
     
+    func delete(_ object: NSManagedObject) {
+        guard let context = managedObjectContext else { return }
+        
+        context.delete(object)
+        
+        try? context.save()
+    }
+    
     func createBattle(hero: Hero, villain: Villain) {
         guard
             let context = managedObjectContext,
