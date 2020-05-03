@@ -10,10 +10,15 @@
 		D5DA76D9245EBA64000C7427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76D8245EBA64000C7427 /* AppDelegate.swift */; };
 		D5DA76DB245EBA64000C7427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76DA245EBA64000C7427 /* SceneDelegate.swift */; };
 		D5DA76DD245EBA64000C7427 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76DC245EBA64000C7427 /* ViewController.swift */; };
-		D5DA76E0245EBA64000C7427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76DE245EBA64000C7427 /* Main.storyboard */; };
 		D5DA76E3245EBA64000C7427 /* PersistenciaDatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76E1245EBA64000C7427 /* PersistenciaDatos.xcdatamodeld */; };
-		D5DA76E5245EBA65000C7427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76E4245EBA65000C7427 /* Assets.xcassets */; };
 		D5DA76E8245EBA65000C7427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76E6245EBA65000C7427 /* LaunchScreen.storyboard */; };
+		D5DA76F0245EBB12000C7427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76EF245EBB12000C7427 /* Assets.xcassets */; };
+		D5DA76F4245EBBEE000C7427 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76F2245EBBEE000C7427 /* HeroesViewController.swift */; };
+		D5DA76F5245EBBEE000C7427 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76F3245EBBEE000C7427 /* HeroesViewController.xib */; };
+		D5DA76F9245EBC25000C7427 /* VillainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76F7245EBC25000C7427 /* VillainsViewController.swift */; };
+		D5DA76FA245EBC25000C7427 /* VillainsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76F8245EBC25000C7427 /* VillainsViewController.xib */; };
+		D5DA76FE245EBC4B000C7427 /* BattlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA76FC245EBC4B000C7427 /* BattlesViewController.swift */; };
+		D5DA76FF245EBC4B000C7427 /* BattlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DA76FD245EBC4B000C7427 /* BattlesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +26,16 @@
 		D5DA76D8245EBA64000C7427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DA76DA245EBA64000C7427 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5DA76DC245EBA64000C7427 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5DA76DF245EBA64000C7427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5DA76E2245EBA64000C7427 /* PersistenciaDatos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistenciaDatos.xcdatamodel; sourceTree = "<group>"; };
-		D5DA76E4245EBA65000C7427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5DA76E7245EBA65000C7427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5DA76E9245EBA65000C7427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DA76EF245EBB12000C7427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5DA76F2245EBBEE000C7427 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		D5DA76F3245EBBEE000C7427 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
+		D5DA76F7245EBC25000C7427 /* VillainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsViewController.swift; sourceTree = "<group>"; };
+		D5DA76F8245EBC25000C7427 /* VillainsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillainsViewController.xib; sourceTree = "<group>"; };
+		D5DA76FC245EBC4B000C7427 /* BattlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesViewController.swift; sourceTree = "<group>"; };
+		D5DA76FD245EBC4B000C7427 /* BattlesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattlesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,45 @@
 		D5DA76D7245EBA64000C7427 /* PersistenciaDatos */ = {
 			isa = PBXGroup;
 			children = (
+				D5DA76FB245EBC3B000C7427 /* Battles */,
+				D5DA76F6245EBBF9000C7427 /* Villains */,
+				D5DA76F1245EBBDD000C7427 /* Heroes */,
+				D5DA76EF245EBB12000C7427 /* Assets.xcassets */,
 				D5DA76D8245EBA64000C7427 /* AppDelegate.swift */,
 				D5DA76DA245EBA64000C7427 /* SceneDelegate.swift */,
 				D5DA76DC245EBA64000C7427 /* ViewController.swift */,
-				D5DA76DE245EBA64000C7427 /* Main.storyboard */,
-				D5DA76E4245EBA65000C7427 /* Assets.xcassets */,
 				D5DA76E6245EBA65000C7427 /* LaunchScreen.storyboard */,
 				D5DA76E9245EBA65000C7427 /* Info.plist */,
 				D5DA76E1245EBA64000C7427 /* PersistenciaDatos.xcdatamodeld */,
 			);
 			path = PersistenciaDatos;
+			sourceTree = "<group>";
+		};
+		D5DA76F1245EBBDD000C7427 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				D5DA76F2245EBBEE000C7427 /* HeroesViewController.swift */,
+				D5DA76F3245EBBEE000C7427 /* HeroesViewController.xib */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		D5DA76F6245EBBF9000C7427 /* Villains */ = {
+			isa = PBXGroup;
+			children = (
+				D5DA76F7245EBC25000C7427 /* VillainsViewController.swift */,
+				D5DA76F8245EBC25000C7427 /* VillainsViewController.xib */,
+			);
+			path = Villains;
+			sourceTree = "<group>";
+		};
+		D5DA76FB245EBC3B000C7427 /* Battles */ = {
+			isa = PBXGroup;
+			children = (
+				D5DA76FC245EBC4B000C7427 /* BattlesViewController.swift */,
+				D5DA76FD245EBC4B000C7427 /* BattlesViewController.xib */,
+			);
+			path = Battles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +167,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DA76FA245EBC25000C7427 /* VillainsViewController.xib in Resources */,
+				D5DA76FF245EBC4B000C7427 /* BattlesViewController.xib in Resources */,
+				D5DA76F5245EBBEE000C7427 /* HeroesViewController.xib in Resources */,
+				D5DA76F0245EBB12000C7427 /* Assets.xcassets in Resources */,
 				D5DA76E8245EBA65000C7427 /* LaunchScreen.storyboard in Resources */,
-				D5DA76E5245EBA65000C7427 /* Assets.xcassets in Resources */,
-				D5DA76E0245EBA64000C7427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,22 +184,17 @@
 			files = (
 				D5DA76DD245EBA64000C7427 /* ViewController.swift in Sources */,
 				D5DA76D9245EBA64000C7427 /* AppDelegate.swift in Sources */,
+				D5DA76FE245EBC4B000C7427 /* BattlesViewController.swift in Sources */,
+				D5DA76F9245EBC25000C7427 /* VillainsViewController.swift in Sources */,
 				D5DA76DB245EBA64000C7427 /* SceneDelegate.swift in Sources */,
 				D5DA76E3245EBA64000C7427 /* PersistenciaDatos.xcdatamodeld in Sources */,
+				D5DA76F4245EBBEE000C7427 /* HeroesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5DA76DE245EBA64000C7427 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5DA76DF245EBA64000C7427 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D5DA76E6245EBA65000C7427 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
